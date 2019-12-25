@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="logo" src="./assets/logo.png">
+    <FixedTop />
+    <Content />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FixedTop from './components/FixedTop.vue'
+import Content from './components/Content.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    FixedTop,
+    Content
   }
 }
 </script>
 
 <style>
+
+body {
+  margin-top: 0;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
 }
 </style>
